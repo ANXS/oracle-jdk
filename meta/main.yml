@@ -1,0 +1,16 @@
+# file: oracle-jdk/meta/main.yml
+
+galaxy_info:
+  author: pjan vandaele
+  description: Installs the latest update of Oracle JDK version(s)
+  min_ansible_version: 1.4
+  license: MIT
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+  - system
+  - development
+
+dependencies: []

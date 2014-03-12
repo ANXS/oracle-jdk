@@ -1,0 +1,40 @@
+# file: oracle-jdk/tasks/main.yml
+
+- name: Oracle JDK | Add webupd8 repository apt-key
+  apt_key:
+    url: "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0xC2518248EEA14886"
+    state: present
+
+- name: Oracle JDK | Add webupd8 repository
+  apt_repository:
+    repo: 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main'
+    state: present
+
+- name: Oracle JDK | Add webupd8 repository (src)
+  apt_repository:
+    repo: 'deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main'
+    state: present
+
+- name: Oracle JDK | Accept Oracle license
+  debconf:
+    name: "{{item}}"
+    setting: "shared/accepted-oracle-license-v1-1"
+    type: "select"
+    value: "true"
+  with_items:
+    - oracle-java6-installer
+    - oracle-java7-installer
+    - oracle-java8-installer
+
+- name: Oracle JDK | Install JDK package(s)
+  apt:
+    name: "oracle-java{{item}}-installer"
+    state: present
+    update_cache: yes
+  with_items: oracle_jdk_java_versions
+
+- name: Oracle JDK | Set the default Java version
+  apt:
+    name: "oracle-java{{}}-set-default"
+    state: present
+    update_caceh: yes

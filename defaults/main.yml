@@ -1,0 +1,4 @@
+# file: oracle-jdk/defaults/main.yml
+
+oracle_jdk_java_versions: [7]
+oracle_jdk_java_version_default: 7
