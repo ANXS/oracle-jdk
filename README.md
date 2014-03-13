@@ -1,6 +1,6 @@
 ## Ansibles - OracleJDK [![Build Status](https://travis-ci.org/Ansibles/oracle-jdk.png)](https://travis-ci.org/Ansibles/oracle-jdk)
 
-Ansible role to install the latest update of Oracle/Sun JDK version(s) on Ubuntu variants.
+Ansible role to install the latest update of Oracle/Sun JDK version(s).
 
 
 #### Requirements & Dependencies
@@ -10,8 +10,8 @@ Ansible role to install the latest update of Oracle/Sun JDK version(s) on Ubuntu
 #### Variables
 
 ```yaml
-oracle_jdk_java_versions: [7]                  # List of versions to install (6, 7 and/or 8)
-oracle_jdk_java_version_default: 7             # One of the versions installed above
+oracle_jdk_java_versions: [7]             # A list of java versions you want to have installed (6, 7 and/or 8)
+oracle_jdk_java_version_default: 7        # The scala version you want to be the system default
 ```
 
 
