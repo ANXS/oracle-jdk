@@ -11,7 +11,7 @@ Ansible role to install the latest update of Oracle/Sun JDK version(s).
 
 ```yaml
 oracle_jdk_java_versions: [7]             # A list of java versions you want to have installed (6, 7 and/or 8)
-oracle_jdk_java_version_default: 7        # The scala version you want to be the system default
+oracle_jdk_java_version_default: 7        # The java version you want to be the system default
 ```
 
 
