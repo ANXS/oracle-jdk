@@ -1,5 +1,11 @@
 # file: oracle-jdk/tasks/main.yml
 
+- name: Oracle-jdk | Make sure the ansible required dependencies are installed
+  apt:
+    pkg: "{{item}}"
+    state: present
+  with_items: ["python-pycurl", "debconf"]
+
 - name: Oracle JDK | Add webupd8 repository apt-key
   apt_key:
     url: "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0xC2518248EEA14886"
@@ -14,6 +20,13 @@
   apt_repository:
     repo: 'deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main'
     state: present
+
+- name: Oracle JDK | Accept the oracle license
+  shell: "echo {{item}} shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections"
+  with_items:
+    - oracle-java6-installer
+    - oracle-java7-installer
+    - oracle-java8-installer
 
 # Only for ansible 1.6 and higher...
 # - name: Oracle JDK | Accept Oracle license
