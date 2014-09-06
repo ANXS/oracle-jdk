@@ -1,4 +1,4 @@
-## Ansibles - OracleJDK [![Build Status](https://travis-ci.org/Ansibles/oracle-jdk.png)](https://travis-ci.org/Ansibles/oracle-jdk)
+## ANXS - OracleJDK [![Build Status](https://travis-ci.org/ANXS/oracle-jdk.png)](https://travis-ci.org/ANXS/oracle-jdk)
 
 Ansible role to install the latest update of Oracle/Sun JDK version(s).
 
@@ -30,4 +30,4 @@ Licensed under the MIT License. See the LICENSE file for details.
 
 #### Feedback, bug-reports, requests, ...
 
-Are [welcome](https://github.com/ansibles/oracle-jdk/issues)!
+Are [welcome](https://github.com/ANXS/oracle-jdk/issues)!

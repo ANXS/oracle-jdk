@@ -2,7 +2,7 @@
 
 galaxy_info:
   author: pjan vandaele
-  company: Ansibles
+  company: ANXS
   description: "Installs the latest update of Oracle JDK version(s)"
   min_ansible_version: 1.4
   license: MIT
