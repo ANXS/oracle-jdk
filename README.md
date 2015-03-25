@@ -4,7 +4,7 @@ Ansible role to install the latest update of Oracle/Sun JDK version(s).
 
 
 #### Requirements & Dependencies
-- Tested on Ansible 1.4 or higher
+- Tested on Ansible 1.6 or higher
 
 
 #### Variables
