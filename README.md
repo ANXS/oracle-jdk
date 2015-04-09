@@ -4,7 +4,7 @@ Ansible role to install the latest update of Oracle/Sun JDK version(s).
 
 
 #### Requirements & Dependencies
-- Tested on Ansible 1.4 or higher
+- Tested on Ansible 1.6 or higher
 
 
 #### Variables
@@ -21,6 +21,12 @@ To switch between different Java versions, you could use the following terminal 
 ```bash
 sudo update-alternatives --config java
 ```
+
+
+#### Testing
+This project comes with a VagrantFile, this is a fast and easy way to test changes to the role, fire it up with `vagrant up`
+
+See [vagrant docs](https://docs.vagrantup.com/v2/) for getting setup with vagrant
 
 
 #### License
